@@ -12,7 +12,7 @@ function http() {
     }
 
     function remove (id)  {
-        axios.remove(`${url}/${id}`).then(function(response){
+        axios.delete(`${url}/${id}`).then(function(response){
             console.log(response.data);
         })
         .catch(function(error){
@@ -41,8 +41,14 @@ function http() {
         // console.log('get');
     }
 
-    function update() {
-        console.log('update');
+    function update(catagory) {
+        axios.put(url , catagory.id).then(function(response){
+            console.log(response.data);
+        })
+        .catch(function(error){
+                console.log(error);
+        })
+        // console.log('get');
     }
  
     return { add, remove, get, getall, update };
@@ -50,4 +56,8 @@ function http() {
 
 
 // http().getall()
-http().get(1)
+// http().get(1)
+
+// http().remove(78)
+http().update({id : 9, name : "test" , description : "test"})
+http().getall()
