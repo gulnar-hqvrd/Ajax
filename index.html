@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<!-- https://jsonplaceholder.typicode.com/posts/1 -->
-<!-- https://northwind.vercel.app/ -->
+    <style>
+        #loading{position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            z-index: 1000;
+            border-radius: 10px;
+        }
+    </style>
+  </head>
+  <!-- https://jsonplaceholder.typicode.com/posts/1 -->
+  <!-- https://northwind.vercel.app/ -->
 
-<body>
+  <body>
+    <div id="loading" style="display: none">Yuklenirrr...</div>
+    <div id = "content"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- <script src="xMLHttpRequest.js"></script> -->
     <script src="ajax.js"></script>
- 
-</body>
-
-</html> 
+    <!-- <script src="./fectch.js"></script> -->
+    <!-- <script src="./jquery.js"></script> -->
+  </body>
+</html>
